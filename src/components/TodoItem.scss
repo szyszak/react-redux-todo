@@ -1,0 +1,15 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: 20px;
+  padding: 6px;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+
+  &__btn {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
