@@ -10,9 +10,16 @@ class TodoList extends Component {
     });
 
     return (
-      <ul className="todo-list">
-        { todoItems }
-      </ul>
+      <>
+        { todoItems.length > 0 ? (
+          <ul className="todo-list">
+            { todoItems }
+          </ul>
+         ) : (
+          <h2>NO TODOS</h2> 
+          )
+        }
+      </>
     )
   }
 }

@@ -37,16 +37,20 @@ class App extends Component {
     }
   }
 
+  generateId = () => {
+    return Math.floor(new Date().getTime() * Math.random());
+  }
+
   addTodo = (todo) => {
     this.setState({
-      todos: [...this.state.todos, { text: todo, id: Math.floor(new Date().getTime() * Math.random()) }]
-    })
+      todos: [...this.state.todos, { text: todo, id: this.generateId() }]
+    });
   }
 
   removeTodo = (id) => {
     this.setState({
       todos: this.state.todos.filter(todo => todo.id !== id)
-    })
+    });
   }
 
   render() {
