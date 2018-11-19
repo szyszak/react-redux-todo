@@ -11,7 +11,7 @@ class TodoList extends Component {
 
     return (
       <>
-        { todoItems.length > 0 ? (
+        { todoItems.length ? (
           <ul className="todo-list">
             { todoItems }
           </ul>
