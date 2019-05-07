@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint-config-prettier": "^3.5.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "node-sass": "^4.10.0",
     "react": "^16.6.2",
     "react-dom": "^16.6.2",

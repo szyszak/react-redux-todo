@@ -1,52 +1,54 @@
+import * as actionTypes from '../actions/actionTypes';
+
 const generateId = () => {
   return Math.floor(new Date().getTime() * Math.random());
-}
+};
 
 const initialState = {
   todos: [
     {
       text: 'sleep',
-      id: 1
+      id: generateId()
     },
     {
       text: 'eat',
-      id: Math.floor(new Date().getTime() * Math.random())
+      id: generateId()
     },
     {
       text: 'vidya',
-      id: Math.floor(new Date().getTime() * Math.random())
+      id: generateId()
     },
     {
       text: 'beer',
-      id: Math.floor(new Date().getTime() * Math.random())
+      id: generateId()
     },
     {
       text: 'code',
-      id: Math.floor(new Date().getTime() * Math.random())
-    },
+      id: generateId()
+    }
   ]
-}
+};
 
 const todosReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case actionTypes.ADD_TODO:
       return {
         ...state,
         todos: state.todos.concat({
           text: action.payload,
           id: generateId()
         })
-      }
+      };
 
-    case 'REMOVE_TODO':
+    case actionTypes.REMOVE_TODO:
       return {
         ...state,
         todos: state.todos.filter(todo => todo.id !== action.payload)
-      }
+      };
 
     default:
       return state;
   }
-}
+};
 
 export default todosReducer;
