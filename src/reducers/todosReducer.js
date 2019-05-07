@@ -15,14 +15,6 @@ const initialState = {
       id: generateId()
     },
     {
-      text: 'vidya',
-      id: generateId()
-    },
-    {
-      text: 'beer',
-      id: generateId()
-    },
-    {
       text: 'code',
       id: generateId()
     }

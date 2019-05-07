@@ -22,7 +22,7 @@ class AddTodo extends Component {
     event.preventDefault();
 
     if (this.state.input.trim().length === 0) {
-      alert(`can't add empty task!`);
+      alert(`Error: can't add an empty task.`);
     } else {
       this.props.addTodo(this.state.input);
 

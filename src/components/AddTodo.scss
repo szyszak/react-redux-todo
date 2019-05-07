@@ -1,13 +1,21 @@
 .add-todo {
-  margin-top: 60px;
+  margin-top: 20px;
 
   &__label {
-    color: #ffffff;
+    color: #000000;
   }
 
   &__input {
+    height: 25px;
+    padding: 4px;
+    border: solid 1px #000000;
+    border-right: none;
   }
 
   &__btn {
+    width: 50px;
+    height: 25px;
+    border: none;
+    text-align: center;
   }
 }
